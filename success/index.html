@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Expense Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            color: #27ae60;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>Payment Successful!</h1>
+        <p>Thank you for upgrading to Premium! Your premium features have been activated.</p>
+        <p>You now have access to:</p>
+        <ul style="text-align: left; display: inline-block; margin-bottom: 30px;">
+            <li>Export expenses to CSV</li>
+            <li>Visual charts and analytics</li>
+            <li>Ad-free experience</li>
+        </ul>
+        <a href="../index.html" class="btn">Return to App</a>
+    </div>
+
+    <script>
+        // Activate premium features
+        localStorage.setItem('isPremium', 'true');
+
+        // Redirect to main app after 3 seconds
+        setTimeout(function() {
+            window.location.href = '../index.html';
+        }, 3000);
+    </script>
+</body>
+</html>
